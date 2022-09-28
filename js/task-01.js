@@ -8,8 +8,8 @@ countElementsChildren(categoriesRef);
 
 // ======================================================================================= //
 
-const categoriesItemRef = document.querySelectorAll(`.item`);
-categoriesItemRef.forEach(category => {
+const categoriesItemsRef = document.querySelectorAll(`.item`);
+categoriesItemsRef.forEach(category => {
     const list = category.lastElementChild;
 
     console.log(`Category : ${category.firstElementChild.textContent} `);
