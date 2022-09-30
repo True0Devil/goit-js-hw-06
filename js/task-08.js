@@ -1,5 +1,5 @@
-const loginFormRef = document.querySelector(`.login-form`);
-loginFormRef.addEventListener(`submit`, onFormSubmit);
+const loginFormRef = document.querySelector('.login-form');
+loginFormRef.addEventListener('submit', onFormSubmit);
 
 function onFormSubmit(event) {
   event.preventDefault();
@@ -10,20 +10,20 @@ function onFormSubmit(event) {
 
   if (email.value === '' || password.value === '') {
     alert('All fields must be full!');
-      return;
+    return;
   }
-    
+
   //   const formData = new FormData(event.currentTarget);
   //   formData.forEach((value, name) => {
   //       console.log(`name:`, name, `, value:`, value);
   //   });
-    
+
   const formData = {
     formEmail: email.value,
     formPassword: password.value,
   };
 
-    console.log(formData);
-    
-    event.currentTarget.reset();
+  console.log(formData);
+
+  event.currentTarget.reset();
 }

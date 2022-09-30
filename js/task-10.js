@@ -1,10 +1,10 @@
-const mainBoxRef = document.querySelector(`#boxes`);
+const mainBoxRef = document.querySelector('#boxes');
 const createDivBtnRef = document.querySelector(`[data-create]`);
 const clearBtnRef = document.querySelector(`[data-destroy]`);
-const inputRef = document.querySelector(`#controls>input`);
+const inputRef = document.querySelector('#controls>input');
 
-createDivBtnRef.addEventListener(`click`, onCreateBtnClick);
-clearBtnRef.addEventListener(`click`, onClearBtnClick);
+createDivBtnRef.addEventListener('click', onCreateBtnClick);
+clearBtnRef.addEventListener('click', onClearBtnClick);
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
@@ -19,7 +19,7 @@ function createBoxes(amount) {
       boxWidthAndHeight += 10;
     }
 
-    const createdBox = document.createElement(`div`);
+    const createdBox = document.createElement('div');
 
     createdBox.style.width = `${boxWidthAndHeight}px`;
     createdBox.style.height = `${boxWidthAndHeight}px`;
