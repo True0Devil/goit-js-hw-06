@@ -14,6 +14,7 @@ function getRandomHexColor() {
 
 function createBoxes(amount) {
   let boxWidthAndHeight = 30;
+  const createdElements = [];
   for (let i = 1; i <= amount; i += 1) {
     if (i > 1) {
       boxWidthAndHeight += 10;
@@ -25,8 +26,10 @@ function createBoxes(amount) {
     createdBox.style.height = `${boxWidthAndHeight}px`;
     createdBox.style.backgroundColor = getRandomHexColor();
 
-    mainBoxRef.appendChild(createdBox);
+    createdElements.push(createdBox);    
   }
+
+  mainBoxRef.append(...createdElements);
 }
 
 function destroyBoxes() {
